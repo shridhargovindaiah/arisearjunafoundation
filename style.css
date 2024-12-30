@@ -329,6 +329,68 @@
         display: block;
     }
   }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--card-gap, 1rem);
+    padding: 1rem;
+    background: var(--background-light);
+    border-radius: var(--border-radius-3);
+
+    img {
+        border-radius: var(--border-radius-2);
+    }
+  }
+
+  .card__title {
+    font-size: var(--card-title-font-size, var(--font-size-heading-sm));
+    color: var(--card-title-color, var(--text-brand));
+  }
+
+  .card__button {
+    margin-block-start: auto;
+  }
+
+  .button {
+    display: inline-flex;
+    text-decoration: none;
+    cursor: pointer;
+    padding: .5rem 1rem;
+    background-color: var(--background-accent-main);
+    font-family: var(--ff-heading);
+    font-weight: 700;
+    border-radius: var(--border-radius-2);
+
+    &[data-variant="secondary"] {
+        background-color: var(--button-secondary, var(--background-light));
+        color: var(--text-brand-light);
+        letter-spacing: .1rem;
+    }
+  }
+
+  .button:hover,
+  .button:focus-visible {
+    color: var(--text-high-contrast);
+    background-color: var(--background-accent-light);
+  }
+
+  .site-footer {
+    text-align: center;
+    padding-block: 2rem;
+    display: grid;
+    gap: 2rem;
+
+    a {
+        color: var(--text-main);
+    }
+
+    a:hover,
+    a:focus-visible {
+        color: var(--text-brand-light);
+    }
+
+  }
 }
 
 @layer utilities {
