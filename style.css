@@ -4,6 +4,10 @@
  3. Create variable for colors, font etc create a global variable to use it across the application
  4. First figure out layout, basically start creating container or wrapper class to handle different size of the sections.
 */
+@view-transition {
+  navigation: auto;
+}
+
 @layer reset {
   /* 1. Use a more-intuitive box-sizing model */
   *,
@@ -171,10 +175,11 @@
 
   /*
   Below pseudo class is used to style an element that is being targeted.
+  */
   :target {
   scroll-padding: 3rem;
   } 
-  */
+  
 
   @media (prefers-reduced-motion: no-preference) {
     /* this is for people with motion sickness */
@@ -310,6 +315,7 @@
   }
 
   .hero {
+    height: 100vh;
     text-align: center;
     font-size: var(--font-size-md);
     color: var(--text-high-contrast);    
@@ -341,6 +347,11 @@
     img {
         border-radius: var(--border-radius-2);
     }
+  }
+
+  .card > img {
+    height: 100%;
+    object-fit: cover;
   }
 
   .card__title {
@@ -375,6 +386,16 @@
     background-color: var(--background-accent-light);
   }
 
+  .form-button {
+    cursor: pointer;
+    padding: .5rem 1rem;
+    background-color: var(--background-accent-main);
+    color: var(--text-high-contrast);
+    font-weight: 700;
+    border-radius: var(--border-radius-2);
+    letter-spacing: .125rem;
+  }
+
   .site-footer {
     text-align: center;
     padding-block: 2rem;
@@ -401,6 +422,14 @@
   .grid-flow {
     display: grid;
     gap: var(--grid-flow-gap, 1rem);
+  }
+
+  .margin-right {
+    margin-inline-end: var(--button-margin-size, 1.5rem);
+  }
+
+  .text-uppercase {
+    text-transform: uppercase;
   }
 
   .visually-hidden {
