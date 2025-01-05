@@ -15,16 +15,18 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
   </head>
   <body>
     <header class="site-header">
       <!--I added this div to limit the width of the header. You can also call it a container. But I am calling it as wrapper -->
       <div class="wrapper" data-width="wide">
         <div class="site-header__inner">
-          <span class="font-size-heading-sm text-uppercase"
-            >Arise Arjuna Foundation</span
-          >
-          <nav class="primary-navigation">
+          <span class="font-size-lg text-uppercase text-high-contrast">Arise Arjuna Foundation</span>
+          <button aria-controls="primary-nav" aria-expanded="false">
+            <img width="40" src="assets/hamburger-menu.svg" alt="menu" srcset="">
+          </button>
+          <nav id="primary-nav" class="primary-navigation">
             <ul role="list">
               <li><a href="/">Home</a></li>
               <li><a href="#">Information</a></li>
